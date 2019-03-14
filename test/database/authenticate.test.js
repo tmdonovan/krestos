@@ -1,21 +1,16 @@
 const { expect } = require('chai')
 const { it, describe } = require('mocha');
+const config = require('../../db.config');
 
 describe('The database', () => {
-    it('... actually exists', (done) => {
-        const sequelize = require('../../setup/database.js');
+    const db = require('../../setup/database.js');
 
-            sequelize
-                .authenticate()
-                .then(() => {
-                    expect(true).to.equal(true);
-                })
-                .catch(err => {
-                    expect(true).to.equal(false);
-                })
-                .finally( () => {
-                    done();
-                });
+    it('... has a connection', () => {
+        expect(db).to.have.property('_connection')
+    });
+
+    it('...has the krestos database', () => {
+        expect(db.name).to.equal(config.database);
     });
 });
 
