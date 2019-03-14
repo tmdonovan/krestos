@@ -17,8 +17,8 @@
   "author": "Frank M. Taylor, Tim Donovan",
   "license": "ISC",
   "dependencies": {
-    "pg": "^7.8.1",
-    "sequelize": "^4.42.0"
+    "arangojs": "^6.10.0",
+    "pg": "^7.8.1"
   },
   "devDependencies": {
     "chai": "^4.2.0",
