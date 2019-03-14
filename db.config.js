@@ -1,7 +1,7 @@
 module.exports =  dbConfig = {
     user: 'krestos',
-    host: 'localhost',
+    host: 'http://127.0.0.1',
     database: 'krestos',
     password: '#(~q#>FDdJEU2}{',
-    port: 5432,
+    port: 8529,
 };
