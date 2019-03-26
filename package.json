@@ -19,10 +19,13 @@
   "dependencies": {
     "arangojs": "^6.10.0",
     "graphql": "^14.1.1",
+    "koa": "^2.7.0",
+    "koa-graphql": "^0.8.0",
+    "koa-mount": "^4.0.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-http": "^4.2.1",
-    "mocha": "^6.0.1"
+    "mocha": "^6.0.2"
   }
 }
