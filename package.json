@@ -17,6 +17,10 @@
   "author": "Frank M. Taylor, Tim Donovan",
   "license": "MIT+",
   "dependencies": {
+    "apollo-datasource": "^0.3.1",
+    "apollo-datasource-rest": "^0.3.2",
+    "apollo-server": "^2.4.8",
+    "apollo-server-testing": "^2.4.8",
     "arangojs": "^6.10.0",
     "graphql": "^14.1.1",
     "koa": "^2.7.0",
@@ -24,6 +28,9 @@
     "koa-mount": "^4.0.0"
   },
   "devDependencies": {
+    "apollo": "^2.6.2",
+    "apollo-link": "^1.2.11",
+    "apollo-link-http": "^1.5.14",
     "chai": "^4.2.0",
     "chai-http": "^4.2.1",
     "mocha": "^6.0.2"
