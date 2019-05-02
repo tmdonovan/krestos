@@ -6,12 +6,23 @@ describe('The database', () => {
     const db = require('../../setup/database.js');
 
     it('... has a connection', () => {
-        expect(db).to.have.property('_connection')
+        expect(db.database).to.have.property('_connection')
     });
 
     it('...has the krestos database', () => {
-        expect(db.name).to.equal(config.database);
+        expect(db.database.name).to.equal(config.database);
     });
+    
+    it('...has some cursor functions', () => {
+        expect(db.database).to.have.property('q');
+        expect(db.database).to.have.property('qNext');
+        expect(db.database).to.have.property('qAll');
+    });
+
+    it('...has AQL along for the ride', () => {
+        expect(db).to.have.property('aql');
+    });
+
 });
 
 
