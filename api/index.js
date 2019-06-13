@@ -15,7 +15,7 @@ const resolvers = {
    },
    Mutation: {
     upsertPerson: async function (obj, args, ctxN, info) {
-        const record  = args;
+        let record  = args;
 
         record.updatedAt = new Date();
 
@@ -26,7 +26,7 @@ const resolvers = {
             `);
         }
 
-        record = await database.qNext(database.aql`
+        record = await database.qNext(aql`
             UPDATE ${record._key} WITH ${record} IN people RETURN NEW
         `);
 
