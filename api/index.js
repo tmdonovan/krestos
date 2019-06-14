@@ -18,7 +18,6 @@ const resolvers = {
         getPersonByName: async function (obj, args, ctx, info) {
             if (!args.firstName && !args.lastName) return;
 
-            console.log(args);
             let {
                 firstName,
                 lastName
@@ -28,6 +27,25 @@ const resolvers = {
             lastName = lastName ? lastName : '';
 
             const result = await database.qNext(aql `
+            FOR person IN people
+                FILTER person.firstName == ${firstName} OR person.lastName == ${lastName}
+                RETURN person
+            `);
+
+            return result;
+        },
+        getPeopleByName: async function (obj, args, ctx, info) {
+            if (!args.firstName && !args.lastName) return;
+
+            let {
+                firstName,
+                lastName
+            } = args;
+
+            firstName = firstName ? firstName : '';
+            lastName = lastName ? lastName : '';
+
+            const result = await database.qAll(aql `
             FOR person IN people
                 FILTER person.firstName == ${firstName} OR person.lastName == ${lastName}
                 RETURN person

@@ -18,6 +18,7 @@ const person = `
     type Query {
         getPersonByKey (_key: ID): Person
         getPersonByName(firstName: String, lastName: String): Person
+        getPeopleByName(firstName: String, lastName: String): [Person]!
     }
     
     type Mutation {
