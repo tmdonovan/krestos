@@ -1,4 +1,4 @@
-const config = require('../db.config.js');
+const config = require('../config/index').db;
 const arangojs = require('arangojs');
 const { Database, aql } = arangojs;
 const database = new Database(`${config.host}:${config.port}`);
