@@ -1,6 +1,6 @@
 const { expect } = require('chai')
 const { it, describe } = require('mocha');
-const config = require('../../db.config');
+const config = require('../../config/db.config');
 
 describe('The database', () => {
     const db = require('../../setup/database.js');
