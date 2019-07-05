@@ -15,13 +15,13 @@ const person = `
         Spouse: PersonInput
     }
 
-    type Query {
+    extend type Query {
         getPersonByKey (_key: ID): Person
         getPersonByName(firstName: String, lastName: String): Person
         getPeopleByName(firstName: String, lastName: String): [Person]!
     }
     
-    type Mutation {
+    extend type Mutation {
         upsertPerson (_key: ID, firstName: String, lastName: String, spouse:PersonInput): Person
     }
 `
