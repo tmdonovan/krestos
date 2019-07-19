@@ -22,12 +22,14 @@ Kind-of ish. Check the license and contact repo owners for details.
 
 ### Running
 1. Open a command line (ctrl + ` in VS Code, or open a CMD window)
-2. run `npm server` in the command line
+2. run `npm run server` in the command line
 
 In the command window, you will see something like:
 
 ```
-console.log(`listening on localhost:4000/graphql`)
+> node server.js
+
+listening on localhost:4000/graphql
 ```
 
 that is the url for the API
