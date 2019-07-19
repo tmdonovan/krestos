@@ -15,10 +15,21 @@ Kind-of ish. Check the license and contact repo owners for details.
 ### Setup
 1. install Node.js
 2. Install ArrangoDB
-3. Clone this repository: `git clone https://github.com/paceaux/krestos.git`
-4. Navigate into the folder called `krestos`
-5. open a command line (ctrl + ` in VS Code, or open a CMD window)
-6. Run `npm install`
+3. Create the Krestos Database
+    1. Go to the [ArangoDB Login](http://localhost:8529/_db/_system/_admin/aardvark/index.html#login)
+    2. Create a User
+            2.1. Click Users on the left side of the screen
+            2.2 Click "Add User" in the center
+            2.3 Retrieve the username and password from db.config.js and add them here
+    3. Create a Database
+        3.1 Click "Databases" on the left side of the screen
+        3.2 Click "Add Databse" in the center
+        3.3 Retrieve the database name from db.config.js and add it here
+        3.4 Apply the username from db.config.js
+4. Clone this repository: `git clone https://github.com/paceaux/krestos.git`
+5. Navigate into the folder called `krestos`
+6. open a command line (ctrl + ` in VS Code, or open a CMD window)
+7. Run `npm install`
 
 ### Running
 1. Open a command line (ctrl + ` in VS Code, or open a CMD window)
