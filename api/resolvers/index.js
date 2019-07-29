@@ -2,6 +2,12 @@ const person = require('./person');
 const skill = require('./skill');
 
 module.exports = {
-    ...person,
-    ...skill,
+    Query: {
+        ...person.Query,
+        ...skill.Query
+    },
+    Mutation: {
+        ...person.Mutation,
+        ...skill.Mutation
+    }
 };
