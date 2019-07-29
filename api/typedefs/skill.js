@@ -1,24 +1,24 @@
 const skill = `
-    type skill {
+    type Skill {
         _key: ID!
         _id: ID!
         name: String
     }
 
-    input skillInput {
+    input SkillInput {
         _key: ID
         _id: ID
         name: String
     }
 
     extend type Query {
-        getSkillByKey (_key: ID): skill
-        getSkillByName(name: String): skill
-        getSkills(name: String): [skill]!
+        getSkillByKey (_key: ID): Skill
+        getSkillByName(name: String): Skill
+        getSkills(name: String): [Skill]!
     }
     
     extend type Mutation {
-        upsertSkill (_key: ID, name: String): skill
+        upsertSkill (_key: ID, name: String): Skill
     }
 `
 
