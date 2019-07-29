@@ -14,7 +14,7 @@ const skill = `
     extend type Query {
         getSkillByKey (_key: ID): Skill
         getSkillByName(name: String): Skill
-        getSkills(name: String): [Skill]!
+        getSkillsByName(name: String): [Skill]!
     }
     
     extend type Mutation {

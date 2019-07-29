@@ -31,6 +31,19 @@ const resolvers = {
 
             return result;
         },
+        getSkillsByName: async function (obj, args, ctx, info) {
+            if (!args.name) return;
+
+            let {
+                name
+            } = args;
+
+            const result = await database.qAll(aql `
+            FOR skill IN skills
+                FILTER skill.name == ${name}
+                RETURN skill
+            `);
+        }
     },
     Mutation: {
         upsertSkill: async function (obj, args, ctxN, info) {
