@@ -1,0 +1,53 @@
+[
+{
+  "model": "koinonia.church",
+  "pk": 1,
+  "fields": {
+    "name": "New Life",
+    "slug": "",
+    "address_1": "",
+    "address_2": "",
+    "address_3": "",
+    "city": "",
+    "state": "",
+    "zip": null,
+    "phone_number": null
+  }
+},
+{
+  "model": "koinonia.member",
+  "fields": {
+    "password": "pbkdf2_sha256$180000$fZlNHPOHRYuM$zVgJUgpXqtyzWr4c0WOKvNTISuisjs6ZBk5QniruYLw=",
+    "last_login": "2019-12-05T20:21:06.660Z",
+    "is_superuser": true,
+    "username": "user",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-12-05T20:20:14.869Z",
+    "address_1": "",
+    "address_2": "",
+    "address_3": "",
+    "city": "",
+    "state": "",
+    "zip": null,
+    "phone_number": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "koinonia.resource",
+  "pk": 1,
+  "fields": {
+    "name": "Coat",
+    "description": "",
+    "category": "good",
+    "church_owner": 1,
+    "member_owner": null,
+    "network_owner": null
+  }
+}
+]

@@ -1,0 +1,6 @@
+django
+django-environ
+social-auth-app-django
+django-widget-tweaks
+graphene-django
+django-debug-toolbar

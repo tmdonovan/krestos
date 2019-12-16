@@ -1,0 +1,8 @@
+{% extends 'koinonia/200.html' %}
+
+{% block content %}
+    {{ block.super }}
+    <p><a href="{% url 'role_create' slug=object.slug %}" class="btn btn-secondary">Add Role</a></p>
+    <p><a href="#" class="btn btn-secondary">View Days</a></p>
+
+{% endblock content %}
