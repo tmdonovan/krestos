@@ -1,0 +1,33 @@
+stages:
+- build
+- deploy
+
+build:
+  stage: deploy
+  script:
+  - export PREVIOUS=$(docker ps -q --filter="ancestor=koinonia:latest")
+  - docker build . -t koinonia:latest
+  - docker kill $PREVIOUS 2>/dev/null || echo "Could not kill app"
+  - |
+    docker run \
+    --restart=always \
+    --env GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID} \
+    --env GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET} \
+    --env USER_USERNAME=${USER_USERNAME} \
+    --env USER_PASSWORD=${USER_PASSWORD} \
+    --env SECRET_KEY=${SECRET_KEY} \
+    --env DEBUG=${DEBUG} \
+    -v /srv/koinonia:/srv/koinonia/data \
+    -d -p 127.0.0.1:5003:5003 koinonia:latest
+  - sleep 5
+  - docker logs $(docker ps -a -q --filter="ancestor=koinonia:latest" | head -1)
+  - echo "Running application locally on port $port"
+  - cp nginx.conf /etc/nginx/conf.d/koinonia.conf
+  environment:
+    name: production
+    url: http://koinonia.ten08.com
+
+test:
+  stage: build
+  script:
+  - docker build .
