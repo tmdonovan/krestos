@@ -3,10 +3,10 @@
 1) Clone the repo
 1) Change directory into repo
 1) Create Virutal Environment
-1) Create .env file with debug mode set
-1) Create Super User (make sure their username is `user`): `python manage.py createsuperuser`
+1) Create .env file `www/.env` with debug mode set `DEBUG=True` 
 1) Create Database: `python manage.py migrate`
-1) Load data: `python manage.py loaddata koinonia`
+1) Create Super User (make sure their username is `user`): `python manage.py createsuperuser`
+1) (not ready yet) Load data: `python manage.py loaddata koinonia`
 
 
 ## Saving work
